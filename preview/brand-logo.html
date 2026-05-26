@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: "Poppins", system-ui, sans-serif;
+    background: #0077C8;
+    color: #fff;
+    padding: 22px 26px;
+    box-sizing: border-box;
+  }
+  .row {
+    display: flex; align-items: center; gap: 36px;
+  }
+  .wordmark {
+    display: flex; align-items: flex-end;
+    font-weight: 700;
+    font-size: 92px;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    white-space: pre;
+  }
+  .wordmark .p1 { color: #FFFFFF; }
+  .wordmark .p2 { color: var(--pw-amber); }
+  .wordmark img { height: 0.42em; margin-left: 8px; transform: translateY(-30%); }
+  .tagline {
+    margin-top: 16px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.82);
+    letter-spacing: 0.02em;
+  }
+  .mark-isolated { height: 96px; width: auto; }
+  .curta { height: 96px; width: auto; filter: drop-shadow(0 1px 0 rgba(0,0,0,0.06)); }
+</style>
+</head>
+<body>
+  <div class="row">
+    <div>
+      <div class="wordmark"><span class="p1">performa</span> <span class="p2">web</span></div>
+      <div class="tagline">Primary wordmark · aplicável em fundo escuro ou azul #0077C8 · arrow-locked</div>
+    </div>
+    <img class="mark-isolated" src="../assets/asset-seta.png" alt="arrow mark">
+    <img class="curta" src="../assets/logo-curta.png" alt="logo curta">
+  </div>
+</body>
+</html>

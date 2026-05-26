@@ -1,0 +1,242 @@
+/* ============================================================
+   Performaweb — Colors & Type
+   Single source of truth for tokens. Import this into any
+   HTML/JSX surface that needs the brand look.
+   ============================================================ */
+
+/* ---------- Fonts ---------- */
+@font-face {
+  font-family: "Poppins";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("fonts/Poppins-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Poppins";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("fonts/Poppins-Bold.ttf") format("truetype");
+}
+
+:root {
+  /* ---------- Brand core ---------- */
+  --pw-blue:          #0077C8;   /* primary accent, links, buttons */
+  --pw-blue-ink:      #005E9E;   /* hover / pressed */
+  --pw-blue-soft:     #E6F2FA;   /* tinted surface / chips */
+
+  --pw-amber:         #F8AD07;   /* titles, "web" wordmark, arrow mark */
+  --pw-amber-ink:     #D89105;   /* hover / pressed */
+  --pw-amber-deep:    #F08C00;   /* inner triangle of the arrow mark */
+
+  --pw-ink:           #1A1A1A;   /* near-black for "performa" wordmark */
+  --pw-body:          #706F6F;   /* body copy */
+  --pw-muted:         #A8A8A8;   /* captions, disabled */
+  --pw-hairline:      #E6E6E6;   /* borders, dividers */
+  --pw-surface-alt:   #F5F7FA;   /* page tint behind cards */
+  --pw-card:          #FFFFFF;   /* card fill */
+
+  /* ---------- Semantic tokens ---------- */
+  --fg-1:             var(--pw-ink);    /* strongest text */
+  --fg-2:             var(--pw-body);   /* body */
+  --fg-3:             var(--pw-muted);  /* supportive */
+  --fg-title:         var(--pw-amber);  /* H1/H2 accent color per brand */
+  --fg-link:          var(--pw-blue);
+  --fg-on-color:      #FFFFFF;
+
+  --bg-page:          var(--pw-surface-alt);
+  --bg-card:          var(--pw-card);
+  --bg-accent:        var(--pw-blue);
+  --bg-accent-alt:    var(--pw-amber);
+
+  --border-hairline:  var(--pw-hairline);
+  --border-strong:    #CFD4DA;
+
+  /* ---------- Type system ---------- */
+  --font-sans: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Poppins", system-ui, sans-serif;
+
+  --fs-display: 56px;
+  --fs-h1:      40px;
+  --fs-h2:      32px;
+  --fs-h3:      24px;
+  --fs-h4:      20px;
+  --fs-body:    16px;
+  --fs-sm:      14px;
+  --fs-xs:      12px;
+
+  --lh-tight:   1.1;
+  --lh-snug:    1.25;
+  --lh-normal:  1.5;
+  --lh-loose:   1.65;
+
+  --fw-regular: 400;
+  --fw-bold:    700;
+
+  --tracking-tight: -0.01em;
+  --tracking-normal: 0;
+  --tracking-wide:  0.04em;
+
+  /* ---------- Spacing scale (8pt baseline) ---------- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+
+  /* ---------- Radii ---------- */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-pill: 999px;
+
+  /* ---------- Shadows (soft, card-forward) ---------- */
+  --shadow-1: 0 1px 2px rgba(15, 23, 42, 0.06);
+  --shadow-2: 0 4px 16px rgba(15, 23, 42, 0.08);
+  --shadow-3: 0 12px 32px rgba(15, 23, 42, 0.10);
+  --shadow-focus: 0 0 0 3px rgba(0, 119, 200, 0.28);
+
+  /* ---------- Motion ---------- */
+  --ease-standard: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --dur-1: 120ms;
+  --dur-2: 200ms;
+  --dur-3: 320ms;
+}
+
+/* ============================================================
+   Element defaults — opt in by adding .pw-scope to an ancestor.
+   ============================================================ */
+.pw-scope {
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  line-height: var(--lh-normal);
+  color: var(--fg-2);
+  background: var(--bg-page);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.pw-scope h1, .pw-h1,
+.pw-scope h2, .pw-h2,
+.pw-scope h3, .pw-h3,
+.pw-scope h4, .pw-h4 {
+  font-family: var(--font-display);
+  font-weight: var(--fw-bold);
+  color: var(--fg-title);
+  letter-spacing: var(--tracking-tight);
+  line-height: var(--lh-tight);
+  margin: 0 0 var(--space-4);
+  text-wrap: balance;
+}
+
+.pw-scope h1, .pw-h1 { font-size: var(--fs-h1); }
+.pw-scope h2, .pw-h2 { font-size: var(--fs-h2); }
+.pw-scope h3, .pw-h3 { font-size: var(--fs-h3); line-height: var(--lh-snug); }
+.pw-scope h4, .pw-h4 { font-size: var(--fs-h4); line-height: var(--lh-snug); }
+
+.pw-display {
+  font-family: var(--font-display);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-display);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-tight);
+  color: var(--fg-title);
+}
+
+.pw-scope p, .pw-body {
+  font-size: var(--fs-body);
+  line-height: var(--lh-normal);
+  color: var(--fg-2);
+  margin: 0 0 var(--space-4);
+  text-wrap: pretty;
+}
+
+.pw-scope small, .pw-caption {
+  font-size: var(--fs-sm);
+  color: var(--fg-3);
+}
+
+.pw-eyebrow {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-bold);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--pw-blue);
+}
+
+.pw-scope a, .pw-link {
+  color: var(--fg-link);
+  text-decoration: none;
+  font-weight: var(--fw-bold);
+  transition: color var(--dur-1) var(--ease-standard);
+}
+.pw-scope a:hover, .pw-link:hover { color: var(--pw-blue-ink); text-decoration: underline; }
+
+/* ============================================================
+   Building blocks
+   ============================================================ */
+.pw-btn {
+  display: inline-flex; align-items: center; gap: var(--space-2);
+  font-family: var(--font-sans);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-body);
+  line-height: 1;
+  padding: 14px 24px;
+  border-radius: var(--radius-pill);
+  border: 0;
+  cursor: pointer;
+  transition: background var(--dur-2) var(--ease-standard),
+              transform var(--dur-1) var(--ease-standard),
+              box-shadow var(--dur-2) var(--ease-standard);
+  background: var(--pw-blue);
+  color: var(--fg-on-color);
+  box-shadow: var(--shadow-1);
+}
+.pw-btn:hover  { background: var(--pw-blue-ink); box-shadow: var(--shadow-2); }
+.pw-btn:active { transform: translateY(1px); }
+.pw-btn:focus-visible { outline: none; box-shadow: var(--shadow-focus); }
+
+.pw-btn--amber        { background: var(--pw-amber); color: #1A1A1A; }
+.pw-btn--amber:hover  { background: var(--pw-amber-ink); }
+
+.pw-btn--ghost {
+  background: transparent;
+  color: var(--pw-blue);
+  box-shadow: inset 0 0 0 1.5px var(--pw-blue);
+}
+.pw-btn--ghost:hover { background: var(--pw-blue-soft); }
+
+.pw-card {
+  position: relative;
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-2);
+  padding: var(--space-6);
+  overflow: hidden;
+}
+
+/* Branded card: yellow arrow top-right, curta logo bottom-right. */
+.pw-card--branded::before,
+.pw-card--branded::after {
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: contain;
+  pointer-events: none;
+}
+.pw-card--branded::before {
+  top: 16px; right: 16px;
+  width: 56px; height: 42px;
+  background-image: url("assets/asset-seta.png");
+}
+.pw-card--branded::after {
+  bottom: 16px; right: 16px;
+  width: 48px; height: 48px;
+  background-image: url("assets/logo-curta.png");
+}

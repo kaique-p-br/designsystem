@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;padding:0;font-family:"Poppins",system-ui,sans-serif}
+  body{padding:22px 24px;background:#fff;box-sizing:border-box;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .fld{display:flex;flex-direction:column;gap:6px}
+  label{font-size:12px;font-weight:700;color:#1A1A1A;letter-spacing:0.02em}
+  .inp{font-family:inherit;font-size:14px;padding:12px 14px;border-radius:12px;border:1.5px solid #E6E6E6;background:#fff;color:#1A1A1A;outline:none;transition:border-color 120ms, box-shadow 200ms}
+  .inp::placeholder{color:#A8A8A8}
+  .inp:focus{border-color:#0077C8;box-shadow:0 0 0 3px rgba(0,119,200,0.20)}
+  .hint{font-size:11px;color:#706F6F}
+  .err{color:#D92D20;font-size:11px;font-weight:700}
+  .inp.err{border-color:#D92D20}
+  .chip{display:inline-flex;align-items:center;gap:6px;background:#E6F2FA;color:#0077C8;font-weight:700;font-size:12px;padding:6px 10px;border-radius:999px}
+</style>
+</head>
+<body>
+  <div class="fld">
+    <label>Nome</label>
+    <input class="inp" placeholder="Como podemos te chamar?">
+    <div class="hint">Aparece no painel e nos e-mails.</div>
+  </div>
+  <div class="fld">
+    <label>E-mail</label>
+    <input class="inp" value="voce@performaweb.com.br" style="border-color:#0077C8;box-shadow:0 0 0 3px rgba(0,119,200,0.20)">
+    <div class="hint">Focado · blue ring</div>
+  </div>
+  <div class="fld">
+    <label>URL</label>
+    <input class="inp err" value="htps://">
+    <div class="err">Endereço inválido — faltou o https.</div>
+  </div>
+  <div class="fld">
+    <label>Plano</label>
+    <div style="display:flex;gap:8px;margin-top:2px"><span class="chip">Starter</span><span class="chip" style="background:#FFF4D1;color:#B6820B">Pro · atual</span><span class="chip">Agência</span></div>
+  </div>
+</body>
+</html>

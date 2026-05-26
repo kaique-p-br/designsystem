@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;padding:0;font-family:"Poppins",system-ui,sans-serif}
+  body{padding:24px;background:#F5F7FA;box-sizing:border-box}
+  .row{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .card{background:#fff;border-radius:16px;height:120px;display:flex;align-items:flex-end;padding:14px 16px}
+  .lbl{font-size:11px;font-weight:700;color:#1A1A1A}
+  .lbl span{display:block;color:#A8A8A8;font-weight:400;font-size:10px;margin-top:2px}
+  .s1{box-shadow:0 1px 2px rgba(15,23,42,0.06)}
+  .s2{box-shadow:0 4px 16px rgba(15,23,42,0.08)}
+  .s3{box-shadow:0 12px 32px rgba(15,23,42,0.10)}
+</style>
+</head>
+<body>
+  <div class="row">
+    <div class="card s1"><div class="lbl">shadow-1<span>resting · subtle lift</span></div></div>
+    <div class="card s2"><div class="lbl">shadow-2<span>cards · default surface</span></div></div>
+    <div class="card s3"><div class="lbl">shadow-3<span>modals · elevated</span></div></div>
+  </div>
+</body>
+</html>

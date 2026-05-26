@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;padding:0;font-family:"Poppins",system-ui,sans-serif}
+  body{padding:20px 24px;background:#fff;box-sizing:border-box}
+  .row{display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:18px;align-items:stretch}
+  .tile{border-radius:14px;padding:18px 20px;display:flex;flex-direction:column;justify-content:space-between;min-height:140px}
+  .tile .k{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;opacity:0.8}
+  .tile .v{font-weight:700;font-size:24px;letter-spacing:-0.01em}
+  .tile .hex{font-size:12px;opacity:0.9;font-variant-numeric:tabular-nums;letter-spacing:0.02em}
+  .title  { background:#FFF8E7; color:#1A1A1A }
+  .title .v { color:#F8AD07 }
+  .body   { background:#F5F7FA; color:#1A1A1A }
+  .body  .v { color:#706F6F }
+  .link   { background:#E6F2FA; color:#1A1A1A }
+  .link  .v { color:#0077C8 }
+</style>
+</head>
+<body>
+  <div class="row">
+    <div class="tile title">
+      <div class="k">Título</div>
+      <div class="v">Performance bonita,<br>rápida, sua.</div>
+      <div class="hex">Amber · #F8AD07</div>
+    </div>
+    <div class="tile body">
+      <div class="k">Corpo</div>
+      <div class="v" style="font-weight:400;font-size:15px;line-height:1.5">Corpo em Poppins Regular, 16/24, com cinza médio para manter conforto de leitura.</div>
+      <div class="hex">Grey · #706F6F</div>
+    </div>
+    <div class="tile link">
+      <div class="k">Link · Botão</div>
+      <div class="v">saiba mais →</div>
+      <div class="hex">Blue · #0077C8</div>
+    </div>
+  </div>
+</body>
+</html>
